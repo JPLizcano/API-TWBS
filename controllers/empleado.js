@@ -30,7 +30,7 @@ const empleadoPost = async (req, res) => {
       const empleado = new Empleado(body);
       await empleado.save();
     } catch (error) {
-      mensaje = "Problemas al crear el empleado.";
+      mensaje = "Problemas al crear el empleado.", error;
       console.log(error);
     }
   }
